@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1day講座申し込みフォーム | DESIGN CAMPUS</title>
+  <meta name="description" content="1Dayクリエイティブセミナーの申し込みフォームです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-form">
+  <header class="header header--strong">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="DESIGN CAMPUS" width="176" height="36">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="site-nav">
+        <a href="index.html#features">本講座の特徴</a>
+        <a href="index.html#courses">講座一覧</a>
+        <a href="index.html#faq">よくあるご質問</a>
+        <a class="btn btn-cta btn-nav" href="contact.html">お申し込みはこちら</a>
+      </nav>
+      <a class="btn btn-cta btn-header" href="contact.html" aria-current="page">お申し込みはこちら</a>
+    </div>
+  </header>
+
+  <main class="form-main">
+    <h1 class="form-title">1day講座申し込みフォーム</h1>
+    <form class="apply-form" id="apply-form" action="thanks.html" method="get" novalidate>
+      <div class="form-fields">
+        <div class="field">
+          <label class="field-label" for="name">
+            <span>名前</span>
+            <span class="badge">必須</span>
+          </label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="お名前を入力してください。" required>
+          <p class="field-error" data-error-for="name" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="email">
+            <span>メールアドレス</span>
+            <span class="badge">必須</span>
+          </label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="メールアドレスを入力してください。" required>
+          <p class="field-error" data-error-for="email" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="tel">
+            <span>電話番号</span>
+            <span class="badge">必須</span>
+          </label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="電話番号を入力してください。" required>
+          <p class="field-error" data-error-for="tel" hidden></p>
+        </div>
+
+        <fieldset class="field">
+          <legend class="field-label">
+            <span>参加希望</span>
+            <span class="badge">必須</span>
+          </legend>
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name="course" value="1210" required>
+              <span class="choice-mark" aria-hidden="true"></span>
+              <span class="choice-text">12/10(日)　<br>2時間でかんたんに名刺デザインを作成してみよう！</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="course" value="1217">
+              <span class="choice-mark" aria-hidden="true"></span>
+              <span class="choice-text">12/17(日)　<br>集客のためのWeb活用術〜SEOとユーザビリティのお話〜</span>
+            </label>
+          </div>
+          <p class="field-error" data-error-for="course" hidden></p>
+        </fieldset>
+      </div>
+
+      <div class="form-submit">
+        <label class="agree">
+          <input type="checkbox" name="privacy" required>
+          <span class="agree-mark" aria-hidden="true"></span>
+          <span>プライバシーポリシーに同意する</span>
+        </label>
+        <p class="field-error" data-error-for="privacy" hidden></p>
+        <button class="btn btn-send" type="submit">送 信</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>Copyright 2023 DESIGN CAMPUS</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
